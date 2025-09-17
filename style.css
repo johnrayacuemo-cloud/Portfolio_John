@@ -171,7 +171,7 @@
   /* ANIMATIONS */
   .fade-in { opacity:0; transform:translateY(40px); transition:all 0.8s ease; }
   .fade-in.visible { opacity:1; transform:translateY(0); }
-  
+
   /* === Improved Skills Bars === */
 .bar {
     background: #222;
@@ -199,4 +199,58 @@
   /* Optional hover glow */
   .skill:hover label { color: var(--accent); }
   .bar:hover span { box-shadow: 0 0 12px var(--accent2); }
-  
+  /* ==== MOBILE RESPONSIVENESS ==== */
+@media (max-width: 900px) {
+  /* NAV */
+  .nav-inner {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .cta {
+    margin-top: 0.5rem;
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 6rem 1rem 3rem;
+  }
+  .hero-text {
+    flex: unset;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-img img {
+    width: 250px;  /* smaller image on mobile */
+    margin-top: 1.5rem;
+  }
+
+  /* CONTACT */
+  #contact .form-grid {
+    grid-template-columns: 1fr; /* stack inputs */
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 500px) {
+  .hero-name {
+    font-size: 1.8rem;
+  }
+  .hero-title {
+    font-size: 1rem;
+  }
+  .section {
+    padding: 3.5rem 1rem;
+  }
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
